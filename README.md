@@ -36,7 +36,7 @@ Contact page
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/d46ef332-8730-4d9e-a191-cb16b3c1c488" />
 
 
-My booking
+My booking/Calculate Fees
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/180220bd-75e1-4a7e-91c6-be818db7de82" />
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/f39eba90-ec55-44db-8b97-acfd8d7ccbd7" />
 <img width="1913" height="1078" alt="image" src="https://github.com/user-attachments/assets/9df709ec-7f73-4e66-910b-1201911b7bcd" />
