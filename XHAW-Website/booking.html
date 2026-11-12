@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#184c35" />
+  <meta name="description" content="Adventure Escape SA — guided outdoor experiences, packages and an instant demo quotation in the Western Cape." />
+  <title>Calculate Fees | Adventure Escape SA</title>
+  <link rel="icon" href="assets/adventure-logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="booking">
+  <div class="announcement"><span class="announcement-dot"></span> Made for memorable moments in the Western Cape <span class="announcement-sparkle">✦</span> Guided outdoor experiences</div>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Adventure Escape SA home">
+        <img class="brand-logo" src="assets/adventure-logo.png" alt="Adventure Escape SA mountain and river logo" />
+        <span class="brand-copy"><strong>ADVENTURE<span>ESCAPE</span></strong><small>SOUTH AFRICA</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="about.html" data-nav="about">About us</a>
+        <a href="packages.html" data-nav="packages">Packages</a>
+        <a href="activities.html" data-nav="activities">Activities</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-quote" href="booking.html" aria-label="View your booking selections">My booking <span class="cart-count" data-cart-count>0</span><span aria-hidden="true"> ↗</span></a>
+        <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About us</a>
+      <a href="packages.html" data-nav="packages">Adventure packages</a>
+      <a href="activities.html" data-nav="activities">Individual activities</a>
+      <a href="booking.html" class="active" data-nav="booking">My booking</a>
+      <a href="contact.html" data-nav="contact">Contact us</a>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span>Calculate fees</div><div class="eyebrow eyebrow-light" style="margin-top:24px">INSTANT FEE ESTIMATOR</div><h1>Your next adventure, all added up.</h1><p>Select your experiences, see how the discounts work, and generate a sample quote with VAT included.</p></div></section>
+      <section class="section"><div class="container"><div class="demo-banner"><span aria-hidden="true">ⓘ</span><span><strong>Student project demo:</strong> Estimates are calculated in your browser. This is not a real reservation, payment or enquiry service, and your contact information is not transmitted.</span></div>
+      <div class="quote-grid"><div><section class="quote-section"><h2>01. Your selected experiences</h2><p class="muted">Change quantities or remove items whenever you like.</p>
+          <div id="cart-lines" aria-live="polite"></div>
+        </section>
+      <section class="quote-section"><h2>02. Customer details</h2><p class="muted">These form fields demonstrate the information a real business would collect. Nothing is sent to a server.</p><form id="quote-form"><div class="field-grid"><div class="field"><label for="name">Full name *</label><input id="name" name="name" placeholder="Your name" autocomplete="name" maxlength="80" value="" required /></div><div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" placeholder="e.g. 071 000 0000" autocomplete="tel" minlength="7" maxlength="25" value="" required /></div><div class="field full"><label for="email">Email address *</label><input id="email" name="email" type="email" placeholder="yourname@example.com" autocomplete="email" maxlength="120" value="" required /></div><div class="field full"><label for="message">Additional notes (optional)</label><textarea id="message" name="message" maxlength="400" placeholder="Let us know your group type or other preferences..."></textarea></div></div><p class="field-help">* Required fields. In this demo, these details are used only to display the local quotation preview.</p></form></section>
+      </div><aside class="quote-summary"><h2>Your fee estimate</h2><p class="muted" style="font-size:.82rem">All amounts are in South African rand (ZAR).</p><div class="totals-list">
+            <div class="total-line"><span>Selected bookings</span><strong data-total="count">0</strong></div>
+            <div class="total-line"><span>Subtotal</span><strong data-total="subtotal">R0.00</strong></div>
+            <div class="total-line discount-line"><span>Discount (<span data-total="rate">0</span>%)</span><strong data-total="discount">−R0.00</strong></div>
+            <div class="total-line"><span>After discount</span><strong data-total="beforeVat">R0.00</strong></div>
+            <div class="total-line"><span>VAT (15%)</span><strong data-total="vat">R0.00</strong></div>
+            <div class="total-line grand"><span>Estimated total</span><strong data-total="total">R0.00</strong></div>
+          </div>
+          <div class="discount-tip"><b>✦</b><span id="discount-tip">Add two or more selections to unlock a discount.</span></div>
+          <button class="button button-gold button-wide" type="submit" form="quote-form" id="generate-quote" disabled>Generate sample quote ↗</button><p class="small-print">Quote only, not a final invoice. No real booking, transaction, data transmission or email is performed.</p><div id="quote-output" aria-live="polite"></div></aside></div></div></section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-brand"><img src="assets/adventure-logo.png" alt=""/><span>ADVENTURE<br/><strong>ESCAPE SA</strong></span></div>
+        <p>Big adventures. Beautiful places. Better memories. Explore the outdoors with carefully planned, professionally guided experiences.</p>
+        <div class="footer-chips"><span>Western Cape</span><span>Est. 2024</span></div>
+      </div>
+      <div class="footer-col"><h3>Explore</h3><a href="packages.html">Adventure packages</a><a href="activities.html">Individual activities</a><a href="booking.html">Calculate fees</a></div>
+      <div class="footer-col"><h3>Our company</h3><a href="about.html">Our story</a><a href="contact.html">Contact us</a><a href="contact.html">Location information</a></div>
+      <div class="footer-col footer-cta"><h3>Ready for the outdoors?</h3><p>Choose your experiences and get an instant estimate, including discounts and VAT.</p><a class="button button-gold button-small" href="packages.html">Explore adventures <span>↗</span></a></div>
+    </div>
+    <div class="footer-bottom container"><span>© <span id="year"></span> Adventure Escape SA · Student project prototype (XHAW5112)</span><span>Made with curiosity &amp; a love for nature <span aria-hidden="true">✦</span></span></div>
+  </footer>
+  <nav class="mobile-bottom-nav" aria-label="Quick mobile navigation">
+    <a href="index.html" data-nav="home"><span aria-hidden="true">⌂</span>Home</a>
+    <a href="packages.html" data-nav="packages"><span aria-hidden="true">◈</span>Explore</a>
+    <a href="booking.html" data-nav="booking"><span aria-hidden="true">▦</span>Booking <b data-cart-count>0</b></a>
+    <a href="contact.html" data-nav="contact"><span aria-hidden="true">✉</span>Contact</a>
+  </nav>
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">Please turn on JavaScript to use the interactive website, including its booking fee calculator.</div></noscript>
+</body>
+</html>
